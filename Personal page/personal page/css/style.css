@@ -1,0 +1,196 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+:root{
+  --fs-default: 1rem;
+  --fs-h1: 5rem;
+  --fs-p: 2rem;
+  --fs-credit: .5rem;
+  --color-background:  rgba(255, 255, 255, 0.904);
+  --bs:14px 6px 26px 1px rgba(0, 0, 0, 0.45),
+  0px 25px 20px -20px rgba(0,0,0,0.45);
+}
+body{
+  font-size: var(--fs-default);
+  font-family: 'Rubik', Arial, Helvetica, sans-serif;
+  margin: 0;
+  background-color: var(--color-background);
+}
+h1, h2{
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header{
+  max-width: 75%;
+  box-shadow: var(--bs);
+  border-radius: 20px;
+  margin: 30px auto 50px;
+}
+.navUl{
+  display: flex;
+  list-style: none;
+  justify-content: space-evenly;
+  align-items: center;
+  min-width: 200px;
+  min-height: 100px;
+  font-size: 1.2rem;
+}
+
+/******************** Introduction ***********************/
+.intro{
+  display: flex;
+  min-width: 100%;
+  justify-content: space-between;
+}
+
+.divIntro{
+  justify-content: start;
+  padding: 1em;
+  max-width: 60%;
+}
+.introH1{
+  font-size: var(--fs-h1);
+  margin-bottom: 0;
+}
+.introP {
+  font-size: var(--fs-p);
+  margin-top: 0;
+}
+.langIcons{
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.langIcons > img{
+  max-width: 7%;
+ 
+}
+.profilePic{
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+.profilePic > img {
+  max-width: 90%;
+  max-height: 90%;
+  object-fit: cover;
+  border-radius: 20%;
+}
+.profilePic > a{
+  max-width: 50%;
+  font-size: var(--fs-credit);
+}
+
+
+/************* My Work ***********/
+.myWork{
+  max-width: 100%;
+  text-align: center;
+}
+.myworkmain{
+
+}
+
+/************* About Me ***********/
+.aboutMe{
+  min-height: 500px;
+  max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.aboutMe h2{
+  width: 100%;
+  text-align: center;
+}
+.aboutMain{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutP{
+  display: flex;
+  text-align: center;
+  padding: 0 20px;
+}
+.aboutImg{
+  display: flex;
+  justify-content: center;
+}
+.aboutImg > img{
+  max-width: 60%;
+  object-fit: cover;
+  border-radius: 30%;
+}
+
+/************* Contact ***********/
+.contactMe{
+  max-width: 100%;
+  min-height: 500px;
+}
+.contactMe h2{
+  width: 100%;
+  text-align: center;
+}
+.contactBox{
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+}
+form input,
+form textarea{
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgba(238, 238, 238, 0.492);;
+}
+form input:focus,
+form textarea:focus{
+  outline:none;
+  box-shadow: 0 0 5px  rgba(0, 0, 0, 0.45);
+}
+form button{
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #1b1b1b;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+form button:hover{
+  background-color: #555;
+  
+}
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
