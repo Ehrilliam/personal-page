@@ -66,10 +66,13 @@ header{
   align-items: center;
   min-width: 200px;
   min-height: 100px;
-  font-size: 1.2rem;
 }
 a {
   text-decoration: none;
+  color: black
+}
+a:hover{
+  color: rgb(63, 77, 70);
 }
 /******************** Introduction ***********************/
 .intro{
@@ -83,14 +86,7 @@ a {
   padding: 2em;
   max-width: 60%;
 }
-.introH1{
-  font-size: var(--fs-h1);
-  
-}
-.introP {
-  font-size: 3em;
-  
-}
+
 .langIcons{
   display: flex;
   justify-content: center;
@@ -135,8 +131,6 @@ a {
 }
 .myWorksWrap{
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
   flex-flow: row wrap;
 }
 .myWorkList{
@@ -144,6 +138,7 @@ a {
   margin: auto; /* Add horizontal spacing between items */
   margin-bottom: 25px; /* Add some vertical spacing between items */
   padding: 15px 25px;
+  text-align: center;
 }
 
 /************* My Skills ***********/
@@ -233,7 +228,7 @@ a {
   width: 100%;
   text-align: center;
 }
-.contactBox{
+#contactBox{
   width: 80%;
   max-width: 600px;
   margin: 50px auto;
@@ -277,14 +272,14 @@ form button:hover{
 /* Media Queries
 /*******************************************/
 
-/* Default styles for screens larger than 768px */
+/*********** Default styles for screens larger than 768px ***********/
 @media (min-width: 769px) {
   body {
     font-size: var(--fs-default);
   }
 
   .navUl {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .intro {
@@ -294,7 +289,14 @@ form button:hover{
   .divIntro {
     max-width: 60%;
   }
-
+  .introH1{
+    font-size: var(--fs-h1);
+    
+  }
+  .introP {
+    font-size: 3em;
+    
+  }
   .profilePic {
     max-width: 50%;
   }
@@ -303,16 +305,6 @@ form button:hover{
     max-width: 90%;
     max-height: 90%;
   }
-
-  .myWorkList {
-    width: calc(40% - 20px);
-  }
-
-  .myskillsList p,
-  .myTSList p {
-    width: calc(40% - 20px);
-  }
-
   #aboutMe {
     min-height: 500px;
   }
@@ -327,7 +319,7 @@ form button:hover{
   }
 }
 
-/* Media query for screens up to 768px */
+/*********** Media query for screens up to 768px ***********/
 @media (max-width: 768px) {
   body {
     font-size: 16px; 
@@ -337,78 +329,69 @@ form button:hover{
     margin: 0; 
     top: 0; 
   }
-
   .navUl {
     font-size: 1rem; 
   }
-
   .intro {
     flex-direction: column; /* Stack elements vertically for smaller screens */
   }
-
   .divIntro {
     max-width: 100%; 
     padding: 1em; 
   }
-
+  .introH1{
+    font-size: 4rem;
+    
+  }
+  .introP {
+    font-size: 2rem;
+    
+  }
   .langIcons {
     display: none; /* Hide the entire "langIcons" section on smaller screens */
   }
-
   .langIcons > img {
     max-width: 30%; 
   }
-
   .profilePic {
     max-width: 100%; 
     padding: 1em; 
   }
-
   .profilePic > img {
     max-width: 80%; 
     max-height: auto;
   }
-
   .myWorkList {
     width: 100%; 
   }
-
   .myskillsList p,
   .myTSList p {
     width: 100%; 
   }
-
   #aboutMe {
     min-height: auto; 
   }
-
   .aboutMain {
     flex-direction: column; 
   }
-
   .aboutP {
     padding: 0 1em; 
   }
-
   .aboutImg {
     max-width: 100%; 
     padding: 1em; 
   }
-
   .aboutImg > img {
     max-width: 80%; 
   }
-
   .contactBox {
     width: 100%; 
     margin: 20px auto; 
   }
-
   form input,
   form textarea {
     padding: 5px; 
   }
-
   form button {
     padding: 5px; 
   }
