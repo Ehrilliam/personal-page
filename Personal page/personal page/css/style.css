@@ -26,8 +26,8 @@ html {
   --fs-p: 2rem;
   --fs-credit: .5rem;
   --color-background:  rgba(255, 255, 255, 0.904);
-  --bs:14px 6px 26px 1px rgba(0, 0, 0, 0.45),
-  0px 25px 20px -20px rgba(0,0,0,0.45);
+  --bs: 6px 0px 15px -6px rgba(0, 0, 0, 0.45),
+  -4px 4px 10px -3px rgba(0,0,0,0.45);
 }
 body{
   font-size: var(--fs-default);
@@ -39,6 +39,12 @@ h1, h2{
   font-family: 'DM Sans', Arial, Helvetica, sans-serif;
 }
 
+
+/* Allow only vertical resizing of textareas.*/
+textarea {
+  resize: vertical;
+}
+
 /******************************************
 /* LAYOUT
 /*******************************************/
@@ -47,17 +53,24 @@ header{
   box-shadow: var(--bs);
   border-radius: 20px;
   margin: 30px auto 50px;
+  position: sticky;
+  top: 30px; /*at 30px it stays exactly where it is. Less and it moves up a bit when scrolling*/
+  background: #fff; /*without this the background would be transparent*/
+  z-index: 99; /*to make sure it's always on top of other elements*/
 }
 .navUl{
   display: flex;
   list-style: none;
+  text-decoration: none;
   justify-content: space-evenly;
   align-items: center;
   min-width: 200px;
   min-height: 100px;
   font-size: 1.2rem;
 }
-
+a {
+  text-decoration: none;
+}
 /******************** Introduction ***********************/
 .intro{
   display: flex;
@@ -67,24 +80,25 @@ header{
 
 .divIntro{
   justify-content: start;
-  padding: 1em;
+  padding: 2em;
   max-width: 60%;
 }
 .introH1{
   font-size: var(--fs-h1);
-  margin-bottom: 0;
+  
 }
 .introP {
-  font-size: var(--fs-p);
-  margin-top: 0;
+  font-size: 3em;
+  
 }
 .langIcons{
   display: flex;
   justify-content: center;
   gap: 1rem;
+  
 }
 .langIcons > img{
-  max-width: 7%;
+  max-width: 11%;
  
 }
 .profilePic{
@@ -108,28 +122,83 @@ header{
 
 
 /************* My Work ***********/
-.myWork{
+#myWork{
+  min-height: 500px;
   max-width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.myWorkH2{
+  min-width: 100%;
   text-align: center;
 }
-.myworkmain{
-
+.myWorksWrap{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-flow: row wrap;
+}
+.myWorkList{
+  width: calc(40% - 20px); /* Adjust for spacing between columns */
+  margin: auto; /* Add horizontal spacing between items */
+  margin-bottom: 25px; /* Add some vertical spacing between items */
+  padding: 15px 25px;
 }
 
+/************* My Skills ***********/
+
+#mySkills{
+  min-height: 500px;
+  max-width: 100%;
+}
+
+.mySkillsH2,
+.myTSH2{
+  min-width: 100%;
+  text-align: center;
+}
+.skillsSection,
+.myTechStack{
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+  
+}
+.myskillsList,
+.myTSList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribute items equally */
+  text-align: center;
+  margin: 0 -10px;
+}
+
+.myskillsList p,
+.myTSList p {
+  width: calc(40% - 20px); /* Adjust for spacing between columns */
+  margin: auto; /* Add horizontal spacing between items */
+  margin-bottom: 25px; /* Add some vertical spacing between items */
+  background-color: rgba(37, 192, 132, .7); 
+  padding: 15px 25px;
+  
+}
+
+
 /************* About Me ***********/
-.aboutMe{
+#aboutMe{
   min-height: 500px;
   max-width: 100%;
   display: flex;
   flex-wrap: wrap;
 }
-.aboutMe h2{
+#aboutMe h2{
   width: 100%;
   text-align: center;
 }
 .aboutMain{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 .aboutP{
@@ -138,21 +207,29 @@ header{
   padding: 0 20px;
 }
 .aboutImg{
+  max-width: 50%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 1em;
 }
 .aboutImg > img{
   max-width: 60%;
   object-fit: cover;
   border-radius: 30%;
 }
+.aboutImg > a{
+  max-width: 50%;
+  font-size: var(--fs-credit);
+}
 
 /************* Contact ***********/
-.contactMe{
+#contactMe{
   max-width: 100%;
   min-height: 500px;
 }
-.contactMe h2{
+#contactMe h2{
   width: 100%;
   text-align: center;
 }
@@ -194,3 +271,145 @@ form button:hover{
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+
+/******************************************
+/* Media Queries
+/*******************************************/
+
+/* Default styles for screens larger than 768px */
+@media (min-width: 769px) {
+  body {
+    font-size: var(--fs-default);
+  }
+
+  .navUl {
+    font-size: 1.2rem;
+  }
+
+  .intro {
+    justify-content: space-between;
+  }
+
+  .divIntro {
+    max-width: 60%;
+  }
+
+  .profilePic {
+    max-width: 50%;
+  }
+
+  .profilePic > img {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  .myWorkList {
+    width: calc(40% - 20px);
+  }
+
+  .myskillsList p,
+  .myTSList p {
+    width: calc(40% - 20px);
+  }
+
+  #aboutMe {
+    min-height: 500px;
+  }
+
+  .aboutImg > img {
+    max-width: 60%;
+  }
+
+  .contactBox {
+    width: 80%;
+    max-width: 600px;
+  }
+}
+
+/* Media query for screens up to 768px */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px; 
+  }
+  header {
+    max-width: 100%; 
+    margin: 0; 
+    top: 0; 
+  }
+
+  .navUl {
+    font-size: 1rem; 
+  }
+
+  .intro {
+    flex-direction: column; /* Stack elements vertically for smaller screens */
+  }
+
+  .divIntro {
+    max-width: 100%; 
+    padding: 1em; 
+  }
+
+  .langIcons {
+    display: none; /* Hide the entire "langIcons" section on smaller screens */
+  }
+
+  .langIcons > img {
+    max-width: 30%; 
+  }
+
+  .profilePic {
+    max-width: 100%; 
+    padding: 1em; 
+  }
+
+  .profilePic > img {
+    max-width: 80%; 
+    max-height: auto;
+  }
+
+  .myWorkList {
+    width: 100%; 
+  }
+
+  .myskillsList p,
+  .myTSList p {
+    width: 100%; 
+  }
+
+  #aboutMe {
+    min-height: auto; 
+  }
+
+  .aboutMain {
+    flex-direction: column; 
+  }
+
+  .aboutP {
+    padding: 0 1em; 
+  }
+
+  .aboutImg {
+    max-width: 100%; 
+    padding: 1em; 
+  }
+
+  .aboutImg > img {
+    max-width: 80%; 
+  }
+
+  .contactBox {
+    width: 100%; 
+    margin: 20px auto; 
+  }
+
+  form input,
+  form textarea {
+    padding: 5px; 
+  }
+
+  form button {
+    padding: 5px; 
+  }
+}

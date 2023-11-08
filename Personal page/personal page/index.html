@@ -22,18 +22,21 @@
 	<body>
 		<header>
 				<ul class="navUl">
-					<li>Home</li>
-					<li>My Work</li>
-					<li>About Me</li>
-					<li>Contact</li>
+					<li><a href="home">Home</a></li>
+					<li><a href="my work">My Work</a></li>
+					<li><a href="skills">Skills</a></li>
+					<li><a href="about me">About Me</a></li>
+					<li><a href="contact">Contact</a></li>
 				</ul>
 		</header>
 			<!----- Intro ----->
-		<main>
-			<section class="intro">
+		<main class="intro">
+			
 				<div class="divIntro">
-					<h1 class="introH1">Welcome,<br> I'm Ehren</h1>
-					<p class="introP">&ndash;Frontend Developer and UI Designer</p>
+					<h1 class="introH1">Welcome,<br> 
+										I'm Ehren</h1>
+					<p class="introP">&ndash;Frontend Developer <br> 
+									&ThickSpace; and UI Designer</p>
 					<div class="langIcons">
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original-wordmark.svg" />
 						<img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" />
@@ -47,32 +50,114 @@
 					<img src="img/editimg2.png" alt="profilepic">
 					<a href="http://www.freepik.com">Designed by stories / Freepik</a>
 				</div>
-			</section>
+			
 		</main>
 
 			<!----- My Work ----->
-			<section class="myWork">
-				<h2>My Work</h2>
-				<section class="myWorkmain">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident fugit delectus assumenda odio suscipit atque ab temporibus maiores ipsa quisquam repellendus laudantium, a, ipsum illo facere officiis! Incidunt, excepturi!</p>
-				</section>
+			<section id="myWork">
+				<h2 class="myWorkH2">My Work</h2>
+				<div class="myWorksWrap">
+					<div class="myWorkList">
+						<div class="work-image">
+							<a href="#">image here</a>
+						</div>
+						<h3>Project Title</h3>
+						<p>Project description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>Skills: skills used to code</p>
+						<p>Tools: tools used</p>
+						<div class="siteLink">
+							<a href="#">Site link</a>
+						</div>
+					</div>
+					<div class="myWorkList">
+						<div class="work-image">
+							<a href="#">image here</a>
+						</div>
+						<h3>Project Title</h3>
+						<p>Project description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>Skills: skills used to code</p>
+						<p>Tools: tools used</p>
+						<div class="siteLink">
+							<a href="#">Site link</a>
+						</div>
+					</div>
+					<div class="myWorkList">
+						<div class="work-image">
+							<a href="#">image here</a>
+						</div>
+						<h3>Project Title</h3>
+						<p>Project description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>Skills: skills used to code</p>
+						<p>Tools: tools used</p>
+						<div class="siteLink">
+							<a href="#">Site link</a>
+						</div>
+					</div>
+					<div class="myWorkList">
+						<div class="work-image">
+							<a href="#">image here</a>
+						</div>
+						<h3>Project Title</h3>
+						<p>Project description. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+						<p>Skills: skills used to code</p>
+						<p>Tools: tools used</p>
+						<div class="siteLink">
+							<a href="#">Site link</a>
+						</div>
+					</div>
+				</div>
 			</section>
 
-				<!----- About Me ----->
-		<section class="aboutMe">
+			<!----- Skills ----->
+			<section id="mySkills">
+				
+				<div class="skillsSection">
+					<h2 class="mySkillsH2">Developer Skills</h2>
+					<div class="myskillsList">
+						<p>HTML 5</p>
+						<p>CSS 3</p>
+						<p>Flexbox & CSS Grid</p>
+						<p>Media Queries</p>
+						<p>Repsonsive Web Development</p>
+						<p>JavaScript</p>
+					</div>
+				</div>
+
+				<div class="myTechStack">
+					<h2 class="myTSH2">Tech Stack</h2>
+					<div class="myTSList">
+						<p>Photoshop</p>
+						<p>Lightroom</p>
+						<p>Visual Studio Code</p>
+						<p>Figma</p>
+						<p>Git</p>
+					</div>
+				</div>
+
+			</section>
+
+			<!----- About Me ----->
+		<section id="aboutMe">
 			<h2>About Me</h2>
 			<div class = "aboutMain">
 				<section class="aboutP">
-					<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto provident fugit delectus assumenda odio suscipit atque ab temporibus maiores ipsa quisquam repellendus laudantium, a, ipsum illo facere officiis! Incidunt, excepturi!</p>
+					<p>Welcome I'm Ehren, dedicated UI and web developer. My journey into the world of web development began with a background in graphic design and 3D modeling, adding a creative twist to my technical expertise.<br>
+
+					<br>With a strong foundation in HTML, CSS, and JavaScript, I'm all about creating user-friendly and visually appealing websites. I believe that the web should be both functional and beautiful.<br>
+						
+					<br>My portfolio showcases web layouts and interactive games, giving you a taste of my passion for crafting engaging online experiences. I'm excited about the ever-evolving world of web development and the possibilities it offers.<br>
+						
+					<br>Join me on this journey of learning, creating, and making the web a more vibrant and user-friendly place. I'm here to bring a touch of creativity and a commitment to excellence to every project.</p>
 				</section>
 				<section class="aboutImg">
 					<img src="img/4401280.jpg" alt="aboutme">
+					<a href="http://www.freepik.com">Designed by stories / Freepik</a>
 				</section>
 			</div>
 		</section>
 
 		<!----- Contact ----->
-		<section class="contactMe">
+		<section id="contactMe">
 			<h2>Contact</h2>
 			<section class="contactBox">
 				<form>
